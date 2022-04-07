@@ -1,0 +1,221 @@
+:root {
+	box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Zetta:wght@400;500;700&display=swap');
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+	--orange: #f9c546;
+	--black: #222222;
+}
+
+body {
+	font-family: 'Lexend Zetta', sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 24px;
+}
+
+.container {
+	max-width: 1180px;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+
+.header {
+	height: 100vh;
+	padding-top: 40px;
+	background-image: url(../images/image-1.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	
+}
+
+.header::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	/* background: radial-gradient(45.97% 54.43% at 50% 45.57%, rgba(23, 26, 28, 0) 50.28%, rgba(23, 26, 28, 0.00225974) 50.29%, rgba(4, 5, 5, 0.820343) 58.72%, rgba(5, 5, 6, 0.792703) 80.08%, #000000 87.89%);
+	opacity: 0.4; */
+	background: radial-gradient(rgba(5, 5, 6, 0.792703), var(--black) 90%);
+	/* background: radial-gradient(circle farthest-corner at 75% 40% var(--orange)); */
+	/* background-image: radial-gradient(ellipse closest-corner at 75% 40%, var(--orange), var(--black)); */
+	opacity: 0.8;
+}
+
+.header__top {
+	height: 55px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: transparent;
+	position: relative;
+}
+
+.header__logo {
+	height: 100%;
+	display: inline-block;
+}
+
+.header__logo span {
+	height: 100%;
+	padding-bottom: 12px;
+	color: var(--orange);
+	font-size: 28px;
+	line-height: 28px;
+	font-weight: 700;
+	text-transform: uppercase;
+	position: relative;
+}
+
+.header__logo span::before {
+	content: '';
+	width: 30px;
+	height: 5px;
+	position: absolute;
+	bottom: -10px;
+	left: 0;
+	background-color: var(--orange);
+}
+
+.header__menu {
+	display: flex;
+	position: relative;
+}
+
+.menu-list__left {
+	/* width: 500px; */
+	display: flex;
+	/* position: absolute; */
+	top: 0;
+	left: 0;
+}
+
+.menu-list__right {
+	/* width: 500px; */
+	display: flex;
+	margin-right: 30px;
+}
+
+.menu-list__item {
+	width: 100px;
+	padding: 15px 30px 15px 15px;
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: 700;
+	text-transform: uppercase;
+	cursor: pointer;
+	position: relative;
+	transition: all 0.5s ease-in-out;
+}
+
+.menu-list__item::after {
+	content: '';
+	position: absolute;
+	width: 16px;
+	height: 10px;
+	top: 50%;
+	right: 20px;
+	transform: translateY(-50%);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.menu-list__left .menu-list__item::after {
+	background-image: url(../images/chevron-down-black.svg);
+}
+
+.menu-list__right .menu-list__item::after {
+	background-image: url(../images/chevron-down-orange.svg);
+}
+
+.menu-list__left .menu-list__item {
+	color: var(--black);
+	background-color: var(--orange);
+}
+
+.menu-list__right .menu-list__item {
+	color: var(--orange);
+	background-color: var(--black);
+}
+
+.menu-list__item:hover .submenu-list {
+	display: block;
+}
+
+.submenu-list {
+	width: 170px;
+	display: none;
+	position: absolute;
+	top: 50px;
+	left: 0;
+	transition: all 0.5s ease-in-out;
+	z-index: 1;
+}
+
+.submenu-list__item {
+	display: block;
+	padding: 10px 0 10px 30px;
+	font-size: 14px;
+	line-height: 24px;
+	font-weight: 500;
+	cursor: pointer;
+}
+
+.menu-list__right .submenu-list__item {
+	color: var(--black);
+	background-color: var(--orange);
+}
+
+.submenu-list__item {
+	color: var(--orange);
+	background-color: var(--black);
+}
+
+.header__inner {
+	max-width: 680px;
+	height: 128px;
+	margin: 287px auto 0px 340px;
+}
+
+.header__inner-item {
+	height: 100%;
+	color: var(--orange);
+	padding-left: 30px;
+	border-left: 10px solid var(--orange);
+	position: relative;
+}
+
+.inner-item__subtitle {
+	margin-bottom: 40px;
+	font-size: 40px;
+	line-height: 40px;
+	font-weight: 700;
+}
+
+.inner-item__title {
+	font-size: 100px;
+	line-height: 100pz;
+	font-weight: 700;
+}
+
+.inner-item__title span:last-child {
+	color: var(--black);
+}
+
+.bg {
+	width: 39.6%;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	right: 0;
+	background-color: #f8c246;
+	opacity: 0.7;
+}
