@@ -135,17 +135,29 @@
 			<div class="demo__inner">
 				<h2 class="content__inner-title">DEMO TITLE</h2>
 				<div class="decor"></div>
-				<p class="content__inner-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet eligendi suscipit reiciendis sunt modi? Illum amet libero asperiores.</p>
+				<p class="content__inner-text">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet eligendi suscipit reiciendis sunt modi? Illum amet libero asperiores.
+				</p>
 			</div>
 		</div>
 	</section>
 
-	<section class="form">
+	<section class="contacts">
 		<div class="container --small">
-			<div class="form__inner">
-				<h2 class="content__inner-title">DEMO TITLE</h2>
+			<div class="contacts__inner">
+				<h2 class="content__inner-title">Connect with us</h2>
 				<div class="decor"></div>
-				<p class="content__inner-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet eligendi suscipit reiciendis sunt modi? Illum amet libero asperiores.</p>
+				<p class="content__inner-text">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet eligendi suscipit reiciendis sunt modi? Illum amet libero asperiores.
+				</p>
+				<form class="form">
+					<input class="form__name" type="text" placeholder="Name" required="text">
+					<input class="form__email" type="email" placeholder="Email" required="email">
+					<input class="form__phone" type="tel" placeholder="Phone" required pattern="[0-9]{3}[0-9]{2}[0-9]{3}[0-9]{2}}[0-9]{2}">
+					<textarea class="from__message" cols="30" rows="6" placeholder="Message" required></textarea>
+					<span class="valid">Sending...</span>
+					<input class="form__input" type="submit" value="Send Message" required>
+				</form>
 			</div>
 		</div>
 	</section>
