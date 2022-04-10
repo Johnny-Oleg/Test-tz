@@ -1,5 +1,7 @@
 const $menuRight = document.querySelector('.menu-list__right');
 const $menuLeft = document.querySelector('.menu-list__left');
+const $btn = document.querySelector('.mobile__menu-btn');
+const $mobileMenu = document.querySelector('.mobile__menu');
 const $textRight = document.querySelector('.inner-item__title--right');
 const $textLeft = document.querySelector('.header__inner-item');
 const $form = document.querySelector('.form');
@@ -10,7 +12,7 @@ function time() {
 		$menuLeft.classList.add('visible');
 		$textRight.classList.add('visible');
 		$textLeft.classList.add('visible');
-	}, 2000);
+	}, 1500);
 }
 
 window.addEventListener('load', time);
@@ -36,6 +38,11 @@ $form.addEventListener('submit', e => {
 	
 	const $valid = document.querySelector('.valid');
 	$valid.style.display = 'block';
+})
+
+$btn.addEventListener('click', () => {
+	$btn.classList.toggle('active');
+	$mobileMenu.classList.toggle('active');
 })
 
 // document.addEventListener('scroll', () => {
