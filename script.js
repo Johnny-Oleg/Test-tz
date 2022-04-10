@@ -15,13 +15,6 @@ function time() {
 
 window.addEventListener('load', time);
 
-// document.addEventListener('scroll', () => {
-// 	const $html = document.documentElement;
-//     $html.dataset.scroll = window.scrollY;
-
-// 	   $html.dataset.scroll >= 1000 ? $form.classList.add('slide'): '';
-// })
-
 const observer = new IntersectionObserver(function(elems, observer) {
 	elems.forEach(elem => {
 		if (!elem.isIntersecting) return;
@@ -40,7 +33,14 @@ observer.observe($form);
 
 $form.addEventListener('submit', e => {
 	e.preventDefault();
-
+	
 	const $valid = document.querySelector('.valid');
 	$valid.style.display = 'block';
 })
+
+// document.addEventListener('scroll', () => {
+// 	const $html = document.documentElement;
+//     $html.dataset.scroll = window.scrollY;
+
+// 	   $html.dataset.scroll >= 1000 ? $form.classList.add('slide'): '';
+// })
